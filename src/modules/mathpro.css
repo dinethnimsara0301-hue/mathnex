@@ -1,0 +1,130 @@
+/* MATHNEX — Limits & Continuity / Real Analysis module styles.
+   Built entirely on the existing theme variables so dark, light and every theme preset work automatically. */
+
+/* ── math typography ───────────────────────────────────────── */
+.mxr-s{font-size:.72em;line-height:0}
+sup.mxr-s{vertical-align:super}
+sub.mxr-s{vertical-align:sub}
+.mxr-frac{display:inline-flex;flex-direction:column;align-items:center;vertical-align:middle;margin:0 .15em;line-height:1.15;text-align:center}
+.mxr-frac .mxr-n{border-bottom:1.2px solid currentColor;padding:0 .25em .08em}
+.mxr-frac .mxr-d{padding:.08em .25em 0}
+.mxr-sqrt{display:inline-flex;align-items:stretch}
+.mxr-sqrt .mxr-rcand{border-top:1.2px solid currentColor;padding:0 .12em;margin-left:.02em}
+.mxr-code{font-family:var(--f-mono,ui-monospace,monospace);font-size:.92em;padding:1px 5px;border-radius:5px;background:var(--surface3);color:var(--accent)}
+.mxr-ul{margin:.4em 0 .6em 1.1em;padding:0}
+.mxr-ul li{margin:.28em 0}
+.mxr-formula{margin:.45em 0 .1em;padding:.7em .9em;text-align:center;font-family:"Cambria Math","STIX Two Math","Latin Modern Math",Cambria,"Times New Roman",serif;font-size:1.2em;line-height:1.7;color:var(--text);overflow-x:auto;white-space:nowrap}
+
+/* ── lesson browser ─────────────────────────────────────── */
+.lsn-overall{display:flex;align-items:center;gap:14px;margin:4px 0 14px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.lsn-ring{--p:0;flex:none;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--accent) calc(var(--p)*1%),var(--line) 0)}
+.lsn-ring b{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--surface);font:700 12px var(--f-mono,monospace)}
+.lsn-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.lsn-card{display:flex;flex-direction:column;gap:6px;text-align:left;padding:14px;border-radius:14px;border:1px solid var(--line);background:linear-gradient(160deg,var(--surface),var(--surface2));color:var(--text);cursor:pointer;transition:transform .18s,border-color .18s,box-shadow .18s;min-height:150px;font:inherit}
+.lsn-card:hover,.lsn-card:focus-visible{transform:translateY(-2px);border-color:var(--accent);box-shadow:0 10px 30px -16px color-mix(in srgb,var(--accent) 60%,transparent)}
+.lsn-card.done{border-color:color-mix(in srgb,var(--good) 55%,var(--line))}
+.lsn-code{font:700 11px var(--f-mono,monospace);letter-spacing:.08em;color:var(--accent)}
+.lsn-title{font-weight:700;font-size:15.5px;line-height:1.3}
+.lsn-blurb{font-size:12.5px;color:var(--muted);line-height:1.5}
+.lsn-meta{display:flex;flex-wrap:wrap;gap:5px;margin-top:auto}
+.lsn-meta i{font-style:normal;font:600 10.5px var(--f-mono,monospace);padding:3px 7px;border-radius:6px;background:var(--surface3);color:var(--muted)}
+.lsn-card.done .lsn-meta i:first-child{color:var(--good)}
+@media (prefers-reduced-motion:reduce){.lsn-card{transition:none}.lsn-card:hover{transform:none}}
+
+.lsn-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.lsn-crumb{flex:1;min-width:150px;font-size:13px;color:var(--muted)}
+.lsn-crumb b{color:var(--accent)}
+.lsn-bar-nav{display:flex;gap:6px}
+.lsn-pills{display:flex;gap:6px;overflow-x:auto;padding:4px 0 10px;position:sticky;top:0;z-index:4;background:linear-gradient(var(--bg) 78%,transparent);scrollbar-width:thin}
+.lsn-pills button{flex:none;font-size:12px;padding:6px 11px;border-radius:999px}
+.lsn-body{display:flex;flex-direction:column;gap:14px;min-width:0;max-width:100%}
+.lsn-body>*,.lsn-sec,.lsn-det,.lsn-prose,.lsn-def,.lsn-app,.lsn-form,.dm,.dm>*,.dm-out,.mxg-host{min-width:0;max-width:100%}
+.lsn-prose,.lsn-def,.lsn-app,.dm-out,.lw-step{overflow-wrap:anywhere}
+.lsn-sec{padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:var(--surface);scroll-margin-top:56px}
+.lsn-sec>h3{margin:0 0 10px;display:flex;align-items:center;gap:10px;font-size:15px}
+.lsn-sec>h3 .n{font:700 11px var(--f-mono,monospace);color:var(--accent);padding:3px 7px;border-radius:6px;border:1px solid color-mix(in srgb,var(--accent) 40%,transparent)}
+.lsn-prose{font-size:14px;line-height:1.7;color:var(--text)}
+.lsn-prose p{margin:.5em 0}
+.lsn-det{border:1px solid var(--line);border-radius:10px;margin:8px 0;background:var(--surface2)}
+.lsn-det>summary{cursor:pointer;padding:10px 12px;font-weight:600;font-size:13.5px;list-style-position:inside}
+.lsn-det>.lsn-prose{padding:0 14px 12px}
+.lsn-defs,.lsn-forms{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:10px}
+.lsn-def,.lsn-app{padding:11px 13px;border-radius:10px;border:1px solid var(--line);background:var(--surface2);font-size:13.5px;line-height:1.65}
+.lsn-def>b,.lsn-app>b{display:block;color:var(--accent);margin-bottom:3px}
+.lsn-form{border:1px solid var(--line);border-radius:10px;background:var(--surface2);padding:8px 10px;min-width:0}
+.lsn-form small{color:var(--muted);font-size:11.5px}
+.lsn-steps{margin:.4em 0 .6em 1.2em;padding:0}
+.lsn-steps li{margin:.4em 0;padding-left:.2em}
+.lsn-answer{margin-top:8px;padding:9px 12px;border-radius:9px;border:1px solid color-mix(in srgb,var(--good) 45%,var(--line));background:color-mix(in srgb,var(--good) 8%,var(--surface2))}
+.lsn-why{color:var(--muted)}
+.lsn-lv{margin:14px 0 4px;font:700 11.5px var(--f-mono,monospace);letter-spacing:.08em;text-transform:uppercase}
+.lv-b{color:var(--good)}.lv-i{color:var(--info)}.lv-a{color:var(--warn)}.lv-u{color:var(--bad)}
+.lsn-qn{display:inline-block;min-width:26px;margin-right:6px;font:700 11px var(--f-mono,monospace);color:var(--accent)}
+.lsn-hint{color:var(--muted)}
+.lsn-sol{margin:8px 0;border-left:3px solid var(--accent);padding-left:10px}
+.lsn-sol>summary{cursor:pointer;color:var(--accent);font-weight:600;font-size:13px}
+.lsn-chk{display:flex;align-items:center;gap:8px;margin-top:8px;font-size:12.5px;color:var(--muted)}
+.lsn-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:14px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.lsn-demo{margin-top:10px}
+
+/* ── interactive graph ─────────────────────────────────── */
+.mxg-host{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface2)}
+.mxg-canvas{display:block;width:100%;touch-action:none}
+.mxg-bar{display:flex;align-items:center;gap:6px;padding:6px 8px;border-top:1px solid var(--line);flex-wrap:wrap}
+.mxg-bar button{min-width:36px;min-height:34px;padding:2px 10px}
+.mxg-hint{margin-left:auto;font-size:11px;color:var(--faint)}
+
+/* ── demo panels ─────────────────────────────────────────── */
+.dm{display:flex;flex-direction:column;gap:10px}
+.dm-ctrl{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;align-items:end}
+.dm-ctrl .field{margin:0}
+.dm-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.dm-out{padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--surface2);font-size:13px;line-height:1.65}
+.dm-out .ok{color:var(--good)}.dm-out .bad{color:var(--bad)}.dm-out .warn{color:var(--warn)}
+.dm-tbl{width:100%;border-collapse:collapse;font:12px var(--f-mono,monospace)}
+.dm-tbl th,.dm-tbl td{padding:4px 8px;border-bottom:1px solid var(--line);text-align:right}
+.dm-tbl th{color:var(--muted);font-weight:600}
+.dm-two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:640px){.dm-two{grid-template-columns:1fr}}
+.dm-badge{display:inline-block;padding:3px 9px;border-radius:999px;font:700 11px var(--f-mono,monospace);border:1px solid var(--line2)}
+.dm-badge.ok{color:var(--good);border-color:color-mix(in srgb,var(--good) 50%,transparent)}
+.dm-badge.bad{color:var(--bad);border-color:color-mix(in srgb,var(--bad) 50%,transparent)}
+.dm-badge.warn{color:var(--warn);border-color:color-mix(in srgb,var(--warn) 50%,transparent)}
+
+/* ── limit calculator working ───────────────────────────── */
+.lw-steps{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+.lw-step{padding:8px 11px;border-left:3px solid var(--accent);background:var(--surface2);border-radius:0 9px 9px 0;font-size:13px;line-height:1.6;white-space:pre-wrap;overflow-wrap:anywhere}
+.lw-step b{display:block;color:var(--accent);font-size:12px;letter-spacing:.02em;margin-bottom:2px}
+.lw-step.d1{margin-left:14px}.lw-step.d2{margin-left:28px}.lw-step.d3{margin-left:42px}.lw-step.d4{margin-left:56px}
+.lw-head{font-size:1.12em;font-weight:600;margin-bottom:6px;overflow-wrap:anywhere}
+.lw-chips{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+.lw-ex{display:flex;gap:6px;flex-wrap:wrap}
+.lw-ex button{font:12px var(--f-mono,monospace);padding:5px 9px}
+.lw-unsup{border-color:color-mix(in srgb,var(--warn) 55%,var(--line))!important}
+
+/* ── analysis demo specifics ───────────────────────────── */
+.an-seqtbl{max-height:220px;overflow:auto;border:1px solid var(--line);border-radius:10px}
+.an-verdict{font-weight:700}
+.an-note{font-size:12px;color:var(--muted);line-height:1.55}
+.an-proof-step{padding:8px 12px;margin:6px 0;border-radius:9px;border:1px solid var(--line);background:var(--surface2);animation:anIn .25s ease both}
+@keyframes anIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.an-proof-step{animation:none}}
+
+@media (max-width:640px){
+  .lsn-sec{padding:12px}
+  .mxr-formula{font-size:1.05em;padding:.5em .4em}
+  .lsn-grid{grid-template-columns:1fr}
+}
+
+/* full-width inputs inside module cards */
+.dm .field>input[type="text"],.dm .field>input[type="number"],.dm .field>select,#limCalc .field>input[type="text"],#limCalc .field>select{width:100%;min-width:0;box-sizing:border-box}
+.dm-ctrl .vin{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.dm-ctrl .vin input{min-width:0;width:100%}
+.lsn-pills,.lsn-bar{max-width:100%}
+.mxr-formula{max-width:100%}
+.dm-tbl{display:block;overflow-x:auto;max-width:100%}
+.an-seqtbl .dm-tbl{display:table}
+
+/* scroll containers must not widen their ancestors (flex items use min-content as their minimum) */
+.lsn-pills,.mxr-formula,.dm-tbl,.an-seqtbl{contain:inline-size}
+.lsn-pills{width:100%}

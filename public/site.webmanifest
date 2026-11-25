@@ -1,0 +1,11 @@
+{
+  "name": "MATHNEX — Engineering Learning & Simulation Studio",
+  "short_name": "MATHNEX",
+  "description": "Free engineering mathematics, computing, materials and fibre science studio that runs in your browser.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#050816",
+  "theme_color": "#050816",
+  "icons": [{ "src": "./favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}

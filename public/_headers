@@ -1,0 +1,10 @@
+# Cloudflare Pages / Netlify security headers (safe set; a strict CSP is intentionally not included because the app uses inline scripts and the Pyodide CDN).
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
+  X-Frame-Options: SAMEORIGIN
+/config.js
+  Cache-Control: no-cache
+/platform/*
+  Cache-Control: no-cache
