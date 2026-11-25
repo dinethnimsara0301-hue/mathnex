@@ -1,8 +1,0 @@
-{
-  "name": "MATHNEX — Engineering Learning & Simulation Studio",
-  "description": "Offline-first engineering mathematics, Python programming (real Python 3 in the browser via Pyodide), materials science, and fibre science workspace with step-by-step solvers, interactive tensile and morphology labs, a Python Programming Studio, and assessments.",
-  "requestFramePermissions": [],
-  "majorCapabilities": [
-    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
-  ]
-}
